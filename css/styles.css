@@ -36,6 +36,15 @@ a:focus {
     text-decoration: none;
 }
 
+select:focus,
+option:focus {
+    box-shadow: 0 0 3pt 2pt #000;
+}
+
+#restaurants-list li a:focus {
+    box-shadow: 0 0 3pt 2pt #3397db;
+}
+
 a img {
     border: none 0px #fff;
 }
@@ -68,6 +77,8 @@ section {
 #maincontent {
     background-color: #f3f3f3;
     min-height: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 #footer {
@@ -156,6 +167,9 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
+    align-items: center;
+    justify-content: center;
+    display: flex;
     width: 100%;
     height: 50px;
     background-color: #3397DB;
@@ -259,12 +273,22 @@ nav h1 a {
 
 .inside #map-container {
     background: blue none repeat scroll 0 0;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    bottom: 65px;
+    width: 50%;
+}
+
+
+/* .inside #map-container {
+    background: blue none repeat scroll 0 0;
     height: 400px;
     position: relative;
     right: 0;
     top: 130px;
     width: 100%;
-}
+} */
 
 .inside #map {
     background-color: #ccc;
@@ -315,6 +339,7 @@ nav h1 a {
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
     padding: 140px 40px 30px;
+    width: 45%;
 }
 
 #reviews-container {
@@ -341,17 +366,34 @@ nav h1 a {
     list-style-type: none;
     margin: 0 auto 30px;
     overflow: hidden;
-    padding: 0 20px 20px;
     position: relative;
     width: 90%;
 }
 
 #reviews-list li p {
-    margin: 0 0 10px;
+    margin: 0;
+    padding: 10px 20px 20px;
 }
 
 #restaurant-hours td {
     color: #666;
+}
+
+#reviews-list li div p {
+    color: #f58500;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 0;
+    padding: 0 10px;
+}
+
+.reviewer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -359,11 +401,15 @@ nav h1 a {
         flex-direction: column;
     }
     .filter-options {
+        flex-direction: column;
         position: absolute;
         top: 40px;
         margin: 20px auto;
         height: fit-content;
         width: 100%;
+    }
+    .filter-options h2 {
+        display: none;
     }
     #neighborhoods-select {
         width: 90%;
@@ -373,5 +419,29 @@ nav h1 a {
     }
     #map {
         margin-top: 90px;
+    }
+    .inside #map {
+        top: 0;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .inside #map-container {
+        background: blue none repeat scroll 0 0;
+        height: 400px;
+        position: relative;
+        right: 0;
+        top: 130px;
+        width: 100%;
+    }
+    #restaurant-container,
+    #reviews-container,
+    #reviews-container {
+        width: 95%;
+        padding: 140px 0 30px 10px;
+    }
+    #maincontent {
+        flex-direction: column;
     }
 }
