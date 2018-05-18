@@ -78,12 +78,12 @@ section {
     background-color: #f3f3f3;
     min-height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 #footer {
     background-color: #444;
-    color: #aaa;
+    color: #DBDBDB;
     font-size: 8pt;
     letter-spacing: 1px;
     padding: 25px;
@@ -196,6 +196,12 @@ nav h1 a {
     width: 200px;
 }
 
+.filter-options label:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 
 /* ====================== Restaurant Listing ====================== */
 
@@ -233,7 +239,7 @@ nav h1 a {
 }
 
 #restaurants-list li h1 {
-    color: #f18200;
+    color: #c24100;
     font-family: Arial, sans-serif;
     font-size: 14pt;
     font-weight: 200;
@@ -249,7 +255,7 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-    background-color: orange;
+    background-color: #c24100;
     border-bottom: 3px solid #eee;
     color: #fff;
     display: inline-block;
@@ -279,16 +285,6 @@ nav h1 a {
     bottom: 65px;
     width: 50%;
 }
-
-
-/* .inside #map-container {
-    background: blue none repeat scroll 0 0;
-    height: 400px;
-    position: relative;
-    right: 0;
-    top: 130px;
-    width: 100%;
-} */
 
 .inside #map {
     background-color: #ccc;
@@ -402,9 +398,7 @@ nav h1 a {
     }
     .filter-options {
         flex-direction: column;
-        position: absolute;
-        top: 40px;
-        margin: 20px auto;
+        margin: 0 auto;
         height: fit-content;
         width: 100%;
     }
@@ -412,13 +406,10 @@ nav h1 a {
         display: none;
     }
     #neighborhoods-select {
-        width: 90%;
+        width: 85vw;
     }
     #cuisines-select {
-        width: 90%;
-    }
-    #map {
-        margin-top: 90px;
+        width: 85vw;
     }
     .inside #map {
         top: 0;
@@ -440,8 +431,5 @@ nav h1 a {
     #reviews-container {
         width: 95%;
         padding: 140px 0 30px 10px;
-    }
-    #maincontent {
-        flex-direction: column;
     }
 }
