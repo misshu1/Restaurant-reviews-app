@@ -7,7 +7,7 @@ var markers = [];
 
 // Service Worker
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('https://misshu1.github.io/Restaurant-reviews-app/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
         // registration worked
         if (registration.installing) {
             console.log('Service worker installing');
