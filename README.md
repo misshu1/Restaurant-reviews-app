@@ -1,6 +1,6 @@
 # Restaurant Reviews app
 
- **Live Demo here [website](https://andreinedelus.ro/restaurant-review/index.html)**
+ Live Demo here [website](https://andreinedelus.ro/restaurant-review/index.html)
 ---
 
 ### How to run the application
